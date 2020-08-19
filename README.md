@@ -8,7 +8,8 @@ The goal of this pipeline is to automate the classification of camera trap image
 
 The megadetector repo describes installation. The basic structure of the batch command is as follows.  
 
-```python detection/run_tf_detector_batch.py md_v4.1.0.pb IMAGE_DIR/ OUTPUT.json --checkpoint_frequency 100 --recursive
+```
+python detection/run_tf_detector_batch.py md_v4.1.0.pb IMAGE_DIR/ OUTPUT.json --checkpoint_frequency 100 --recursive
 ```
 
 The above command uses the current MD weights file (md_v4.1.0.pb) to classify images located in `IMAGE_DIR` (replace this with the directory containing the images). The results will be saved to a JSON file called `OUTPUT.json` but it can be called anything. The `--checkpoint_frequency 100` switch is important as it saves the progress to file every n images (100 in this case), rather than keeping the entire results in memory. The `--recursive` flag will tell the program to step through nested directories and process those images as well.  
