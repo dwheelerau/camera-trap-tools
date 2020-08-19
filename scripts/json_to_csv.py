@@ -3,7 +3,7 @@ import csv
 import json
 import sys
 
-# A script to convert megadetector_batch json into CSV  
+# A script to convert megadetector_batch json into CSV
 # The CSV cols are: filename, max_confidence, #obj, obj_categories, info
 
 ## Note the bbox info is ignored as it is not used in MD training
@@ -14,12 +14,14 @@ DET_THRESHOLD=0.8
 def process_detections(detections, threshold):
     """process the list of detections"""
     if len(detections) == 0:
+        # no objects detected just pass 0 values through to the CSV
         num_detections = 0
         category = "0"
         info = []
     else:
         cat_found = []
         info = []
+        # logic to only summarise info for obj above the threshold
         for detection in detections:
             if detection['conf'] >= threshold:
                 # only report it in this group if it is above the thres
