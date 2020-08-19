@@ -4,7 +4,7 @@ Camera trap processing tools for researchers at DPIE, parks, and DPI.
 ## Running an automation pipeline based on MS Megadetector  
 The goal of this pipeline is to automate the classification of camera trap image data into false and true triggers.  
 
-1. Run the megadetector batch script from the git repo.  
+1. Run the megadetector batch script from the git repo [ToDo].  
 
 The megadetector repo describes installation. The basic structure of the batch command is as follows.  
 
