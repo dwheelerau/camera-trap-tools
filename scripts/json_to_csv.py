@@ -39,6 +39,8 @@ def process_detections(detections, threshold):
 infile_json = sys.argv[1]
 outfile_csv = infile_json.replace('.json','.csv')
 
+header = ['fname', 'max_detection_thresh','#obj','obj_cats','info']
+
 try:
     assert infile_json.find('json') > -1
 except AssertionError:
@@ -50,6 +52,7 @@ with open(infile_json) as rf:
 
 with open(outfile_csv, 'w') as wf:
     csv_writer = csv.writer(wf)
+    csv_writer.writerow(header)
     for image in data['images']:
         filename = image['file']
         try:

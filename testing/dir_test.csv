@@ -1,0 +1,13 @@
+fname,max_detection_thresh,#obj,obj_cats,info
+data/cats_test/Oolambeyan_Site40_SD40_IMG_5439_20170810.jpg,0.999,1,1,['1:0.999']
+data/cats_test/Oolambeyan_Site40_SD40_IMG_5437_20170810.jpg,0.999,1,1,['1:0.999']
+data/cats_test/Oolambeyan_Site40_SD40_IMG_4374_20170801.jpg,0.999,1,1,['1:0.999']
+data/cats_test/Oolambeyan_Site40_SD40_IMG_5438_20170810.jpg,0.999,1,1,['1:0.999']
+data/cats_test/Oolambeyan_Site40_SD40_IMG_5436_20170810.jpg,0.998,1,1,['1:0.998']
+data/cats_test/Oolambeyan_Site40_SD40_IMG_5436_20170810_1.jpg,0,0,0,[]
+data/cats_test/Oolambeyan_Site40_SD40_IMG_5436_20170810_0.jpg,0.834,1,1,['1:0.834']
+data/cats_test/Oolambeyan_Site40_SD40_IMG_4373_20170801.jpg,0.999,1,1,['1:0.999']
+data/cats_test/Oolambeyan_Site40_SD40_IMG_4372_20170801.jpg,0.999,1,1,['1:0.999']
+data/cats_test/Oolambeyan_Site40_SD40_IMG_4375_20170801.jpg,0.999,1,1,['1:0.999']
+data/cats_test/Oolambeyan_Site40_SD40_IMG_5440_20170810.jpg,0.999,1,1,['1:0.999']
+data/cats_test/tf_out/Oolambeyan_Site40_SD40_IMG_3975_20170719.jpg,0,0,0,[]

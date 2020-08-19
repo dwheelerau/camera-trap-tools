@@ -1,0 +1,183 @@
+{
+ "images": [
+  {
+   "file": "data/cats_test/40_SD40_IMG_5439_0810.jpg",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.3486,
+      0.5521,
+      0.1459,
+      0.1012
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_5437_0810.jpg",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.2132,
+      0.543,
+      0.07884,
+      0.09115
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_4374_0801.jpg",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.4018,
+      0.5529,
+      0.1572,
+      0.1
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_5438_0810.jpg",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.2765,
+      0.5495,
+      0.1046,
+      0.09455
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_5436_0810.jpg",
+   "max_detection_conf": 0.998,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.998,
+     "bbox": [
+      0.1268,
+      0.5478,
+      0.09238,
+      0.07904
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_5436_0810_1.jpg",
+   "max_detection_conf": 0,
+   "detections": []
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_5436_0810_0.jpg",
+   "max_detection_conf": 0.834,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.834,
+     "bbox": [
+      0.3104,
+      0.3137,
+      0.4777,
+      0.3685
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_4373_0801.jpg",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.2749,
+      0.5462,
+      0.1048,
+      0.09393
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_4372_0801.jpg",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.1652,
+      0.5426,
+      0.1046,
+      0.08936
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_4375_0801.jpg",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.605,
+      0.5524,
+      0.1919,
+      0.119
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/40_SD40_IMG_5440_0810.jpg",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.5523,
+      0.5519,
+      0.1822,
+      0.1123
+     ]
+    }
+   ]
+  },
+  {
+   "file": "data/cats_test/tf_out/40_SD40_IMG_3975_0719.jpg",
+   "max_detection_conf": 0,
+   "detections": []
+  }
+ ],
+ "detection_categories": {
+  "1": "animal",
+  "2": "person",
+  "3": "vehicle"
+ },
+ "info": {
+  "detection_completion_time": "2020-07-23 18:58:50",
+  "format_version": "1.0"
+ }
+}
