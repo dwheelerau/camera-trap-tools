@@ -25,6 +25,7 @@ The resulting CSV file will have the same filename as the infile.json but will e
  
 The header on the CSV file are:  
 - `filename`: filename of target image that was processed  
-- `max_confidence`: MD reported max confidence of an animal in the image  
-- `#obj`: The number of animal objects detected by MD  
-- `obj_categories`: Animal=1, Human=2, car=3.  
+- `max_confidence`: MD reported **max confidence** of an animal in the image  
+- `#obj`: The number of animal objects detected by MD above the threshold   
+- `obj_categories`: Animal=1, Human=2, car=3 if they are above the threshold  
+- `info`: Probabilities of any other objects in the image  
