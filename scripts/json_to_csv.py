@@ -40,7 +40,7 @@ my_parser = argparse.ArgumentParser(description='Json to CSV conversion')
 # add detection threshold
 my_parser.add_argument('-t', '--threshold', metavar='threshold', type=float,
                        default=0.8, action='store', dest='DET_THRESHOLD',
-                       help='Detection threshold cut-off value. Must be 0.0 < 1.0')
+                       help='Detection threshold cut-off value. Must be between 0.0 < 1.0. Default value is 0.8')
 
 # infile_json
 my_parser.add_argument('-i', '--infile_csv', metavar='INFILE', type=str,
