@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import argparse
 import csv
 import json
 import sys
@@ -9,7 +10,19 @@ import sys
 ## Note the bbox info is ignored as it is not used in MD training
 ## The info col contains probs of other detections
 
-DET_THRESHOLD=0.8
+# create the parser
+my_parser = argparse.ArgumentParser(description='Json to CSV conversion')
+
+# add detection threshold
+my_parser.add_argument('-t', '--threshold', metavar='threshold', type=float,
+                       default=0.8, action='store', dest='DET_THRESHOLD',
+                       help='Detection threshold cut-off value. Must be 0.0 < 1.0')
+
+# infile_json
+my_parser.add_argument('-i', '--infile_csv', metavar='INFILE', type=str,
+                       action='store', dest='infile_json', required=True,
+                       help='Target megadetector JSON file to convert to CSV')
+args = my_parser.parse_args()
 
 def process_detections(detections, threshold):
     """process the list of detections"""
@@ -36,18 +49,17 @@ def process_detections(detections, threshold):
     return (num_detections, category, info)
 
 # main processing
-infile_json = sys.argv[1]
-outfile_csv = infile_json.replace('.json','.csv')
+outfile_csv = args.infile_json.replace('.json', '.csv')
 
 header = ['fname', 'max_detection_thresh','#obj','obj_cats','info']
-
+'''
 try:
     assert infile_json.find('json') > -1
 except AssertionError:
     print("File does not end in json??")
     sys.exit(1)
-
-with open(infile_json) as rf:
+'''
+with open(args.infile_json) as rf:
     data = json.load(rf)
 
 with open(outfile_csv, 'w') as wf:
@@ -59,7 +71,7 @@ with open(outfile_csv, 'w') as wf:
             max_detection_conf = image['max_detection_conf']
             detections = image['detections']
             num_detections, category, info = process_detections(detections,
-                    DET_THRESHOLD)
+                    args.DET_THRESHOLD)
             data = [filename, max_detection_conf, num_detections,
                     category, info]
             csv_writer.writerow(data)
