@@ -10,20 +10,6 @@ import sys
 ## Note the bbox info is ignored as it is not used in MD training
 ## The info col contains probs of other detections
 
-# create the parser
-my_parser = argparse.ArgumentParser(description='Json to CSV conversion')
-
-# add detection threshold
-my_parser.add_argument('-t', '--threshold', metavar='threshold', type=float,
-                       default=0.8, action='store', dest='DET_THRESHOLD',
-                       help='Detection threshold cut-off value. Must be 0.0 < 1.0')
-
-# infile_json
-my_parser.add_argument('-i', '--infile_csv', metavar='INFILE', type=str,
-                       action='store', dest='infile_json', required=True,
-                       help='Target megadetector JSON file to convert to CSV')
-args = my_parser.parse_args()
-
 def process_detections(detections, threshold):
     """process the list of detections"""
     if len(detections) == 0:
@@ -48,17 +34,25 @@ def process_detections(detections, threshold):
         info = str(info).replace(',',';')
     return (num_detections, category, info)
 
+# create the parser
+my_parser = argparse.ArgumentParser(description='Json to CSV conversion')
+
+# add detection threshold
+my_parser.add_argument('-t', '--threshold', metavar='threshold', type=float,
+                       default=0.8, action='store', dest='DET_THRESHOLD',
+                       help='Detection threshold cut-off value. Must be 0.0 < 1.0')
+
+# infile_json
+my_parser.add_argument('-i', '--infile_csv', metavar='INFILE', type=str,
+                       action='store', dest='infile_json', required=True,
+                       help='Target megadetector JSON file to convert to CSV')
+args = my_parser.parse_args()
+
 # main processing
 outfile_csv = args.infile_json.replace('.json', '.csv')
 
 header = ['fname', 'max_detection_thresh','#obj','obj_cats','info']
-'''
-try:
-    assert infile_json.find('json') > -1
-except AssertionError:
-    print("File does not end in json??")
-    sys.exit(1)
-'''
+
 with open(args.infile_json) as rf:
     data = json.load(rf)
 
