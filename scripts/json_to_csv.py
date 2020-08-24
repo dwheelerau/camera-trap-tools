@@ -68,7 +68,7 @@ with open(outfile_csv, 'w') as wf:
     for image in data['images']:
         filename = image['file']
         try:
-            max_detection_conf = image['max_detection_conf']
+            max_detection_conf = float(image['max_detection_conf'])
             detections = image['detections']
             num_detections, category, info = process_detections(detections,
                     args.DET_THRESHOLD)
